@@ -34,7 +34,7 @@ const sendVerification= async (email,string)=>{
          from:'mytinerary.andres@gmail.com',
          to:email,
          subject: 'verify account',
-         html: `<a href=http://localhost:4000/mytinerary/verify/${string}>CLICK HERE!</a>
+         html: `<a href=https://mytinerary-back-valsesia.herokuapp.com/mytinerary/verify/${string}>CLICK HERE!</a>
          <h3>TO CONFIRM!</h3>`
                           
       }
