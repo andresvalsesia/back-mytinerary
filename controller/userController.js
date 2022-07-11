@@ -171,7 +171,7 @@ const userController ={
             if(user){
                user.verification=true
                await user.save()
-               res.redirect("http://localhost:3000/")
+               res.redirect("https://mytinerary-valsesia.herokuapp.com/index")
             }
             else{
                res.json({success:false,message:'Email has not been confirmed yet!'})
