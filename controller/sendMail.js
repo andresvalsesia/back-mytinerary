@@ -18,9 +18,8 @@ const sendVerification= async (email,string)=>{
       const transporter=nodemailer.createTransport({
          service:"gmail",
          auth:{
-             user:process.env.USER,
+             user:'mytinerary.andres@gmail.com',
              type:"OAuth2",
-             user: process.env.USER,
              clientId:process.env.GOOGLE_CLIENTID,
              clientSecret: process.env.GOOGLE_CLIENTSECRET,
              refreshToken: process.env.GOOGLE_REFRESHTOKEN,
@@ -32,7 +31,7 @@ const sendVerification= async (email,string)=>{
       })
 
       let mailOptions = {
-         from: process.env.USER,
+         from:'mytinerary.andres@gmail.com',
          to:email,
          subject: 'verify account',
          html: `<a href=http://localhost:4000/mytinerary/verify/${string}>CLICK HERE!</a>
